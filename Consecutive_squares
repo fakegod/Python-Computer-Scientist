@@ -1,0 +1,36 @@
+
+import turtle
+
+def draw_square(t,s):
+    for i in range(4):
+        t.forward(s)
+        t.left(90)
+
+square = turtle.Turtle() #write function for making turtle.
+square.speed(0)
+
+square.color("hotpink")
+square.pensize(4)
+
+for i in range(5):
+    draw_square(square,20*(i+1))
+    square.penup()
+    square.right(135)
+    square.forward(15)
+    square.left(135)
+    square.pendown()
+
+cons_square = turtle.Turtle()
+cons_square.speed(0)
+
+cons_square.color("hotpink")
+cons_square.pensize(4)
+cons_square.penup()
+cons_square.setposition(-80,100)
+cons_square.pendown()
+
+for i in range(5):
+    draw_square(cons_square,20)
+    cons_square.penup()
+    cons_square.forward(40)
+    cons_square.pendown()
